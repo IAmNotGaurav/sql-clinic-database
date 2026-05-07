@@ -1,175 +1,217 @@
-#  Clinic Database System (SQL Project)
-
-##  Project Overview
-This project involves the design and implementation of a relational database system for a healthcare clinic using SQL.
-
-The system is built to simulate real-world clinic operations, enabling structured management of:
-- Patient records  
-- Appointment scheduling  
-- Healthcare services  
-- Clinical attendance  
-- Billing and payments  
-
-The aim is to demonstrate how a well-designed database can support both **operational efficiency** and **data-driven decision-making** in a healthcare environment.
+# Clinic Database System (SQL Project)
 
 ---
 
-##  Problem Statement
-Healthcare clinics often deal with fragmented data across multiple systems, making it difficult to:
-- Track patient interactions efficiently  
-- Monitor appointment activity  
-- Manage billing and payments  
-- Analyse service performance  
+## Overview
+This project presents the design and implementation of a relational database system for a healthcare clinic using SQL.
 
-This project addresses these challenges by designing a **centralised relational database** that integrates all key operational components into a single system.
+The system is developed to simulate real-world clinic operations by integrating multiple functional areas into a structured database. It enables efficient management of:
+- Patient records and demographics  
+- Appointment scheduling and tracking  
+- Healthcare services and delivery  
+- Clinical attendance and outcomes  
+- Billing and payment processing  
 
----
-
-##  Objectives
-- Design a structured relational database schema  
-- Define clear relationships between entities  
-- Populate the database with realistic, high-quality sample data (100+ patients)  
-- Implement SQL queries to extract meaningful insights  
-- Simulate real-world healthcare data workflows  
+The project demonstrates how relational databases can be used to organise complex operational data into a structured format that supports both day-to-day activities and analytical insights.
 
 ---
 
-##  Technologies Used
-- **Database:** MySQL  
-- **Language:** SQL  
-- **Concepts Applied:**
-  - Relational modelling  
-  - Primary & Foreign Keys  
-  - Indexing  
-  - Joins (INNER JOIN)  
-  - Aggregation (SUM, COUNT)  
-  - Conditional logic (CASE)  
+## Problem Statement
+Healthcare clinics often operate with fragmented data systems, making it difficult to:
+- Maintain consistent patient records  
+- Track appointment activity and attendance  
+- Monitor service usage and performance  
+- Manage billing and payment status effectively  
+
+This lack of integration can lead to inefficiencies, data inconsistencies, and limited visibility into clinic performance.
+
+This project addresses these challenges by designing a **centralised relational database system** that connects all key operational components into a single, structured framework.
 
 ---
 
-##  Database Design
+## Objectives
+The key objectives of this project are:
 
-###  Entities
+- To design a robust relational database schema for healthcare operations  
+- To establish clear relationships between entities using primary and foreign keys  
+- To populate the database with realistic and non-repetitive sample data (100+ patients)  
+- To simulate real-world appointment scenarios (completed, booked, cancelled, no-show)  
+- To develop SQL queries that extract meaningful business insights  
+- To demonstrate how structured data supports operational and analytical decision-making  
 
-The database consists of six core entities:
+---
+
+## Technologies Used
+- **Database Management System:** MySQL  
+- **Query Language:** SQL  
+
+### Key Concepts Applied:
+- Relational database design  
+- Primary keys and foreign keys  
+- Indexing for performance optimisation  
+- JOIN operations (INNER JOIN)  
+- Aggregation functions (SUM, COUNT)  
+- Conditional logic using CASE statements  
+- Data filtering and sorting  
+
+---
+
+## Database Design
+
+### Entities
+The database is structured around six core entities:
 
 1. **Patients**  
-   Stores patient demographic and contact information.
+   Stores demographic and contact information for each patient.
 
 2. **Professionals**  
-   Contains details of healthcare staff (GPs, nurses, specialists).
+   Contains details of healthcare staff, including roles and contact details.
 
 3. **Services**  
-   Defines the services offered by the clinic along with duration and cost.
+   Defines the services offered by the clinic, including duration and standard fees.
 
 4. **Appointments**  
-   Central entity linking patients, professionals, and services.
+   Acts as the central entity, linking patients, professionals, and services.
 
 5. **Attendance**  
-   Records whether appointments were attended, cancelled, or missed.
+   Tracks appointment outcomes, including attendance status and clinical notes.
 
 6. **Bills**  
-   Tracks financial transactions linked to appointments.
+   Records billing information associated with each appointment.
 
 ---
 
-###  Relationships
+### Relationships
 
-- **Appointments → Patients, Professionals, Services**  
-  One-to-many relationships where each appointment is linked to one entity, but each entity can have multiple appointments.
+- **Patients → Appointments**  
+  One-to-many relationship where one patient can have multiple appointments.
 
-- **Appointments → Attendance & Bills**  
-  One-to-one relationship ensuring each appointment has a single attendance and billing record.
+- **Professionals → Appointments**  
+  One-to-many relationship where one professional can handle multiple appointments.
 
-- **Many-to-many relationships (indirect)**  
-  Achieved through the Appointments table, allowing:
-  - Patients to access multiple services  
-  - Professionals to deliver multiple services  
+- **Services → Appointments**  
+  One-to-many relationship where each service can be used in multiple appointments.
 
----
+- **Appointments → Attendance**  
+  One-to-one relationship ensuring each appointment has a single attendance record.
 
-##  Data Overview
-- 100+ patients with realistic demographic data  
-- Multiple healthcare services with varied pricing and duration  
-- Appointment records covering:
-  - Completed  
-  - Booked  
-  - Cancelled  
-  - No-show scenarios  
-
-The dataset is designed to reflect **real-world variability**, avoiding repetitive or ambiguous values.
+- **Appointments → Bills**  
+  One-to-one relationship ensuring each appointment has a corresponding billing record.
 
 ---
 
-##  Key Analytical Queries
+## ER Diagram
+
+![ER Diagram](er-diagram/er_diagram.png)
+
+---
+
+## 📁 Repository Structure
+
+sql-clinic-database/
+│── sql/
+│ └── clinic_database.sql
+│── er-diagram/
+│ └── er_diagram.png
+│── README.md
+│── LICENSE
+
+
+---
+
+## 📊 Key Queries
 
 ### 1. Patient Demographics Analysis
-Identifies patients within specific age and gender groups, useful for targeted healthcare services (e.g., screenings).
+Retrieves patients based on age range and gender to support targeted healthcare services.
 
 ---
 
 ### 2. Appointment Monitoring
-Tracks cancelled and missed appointments to identify operational inefficiencies and potential revenue loss.
+Identifies cancelled and missed appointments to analyse operational inefficiencies.
 
 ---
 
 ### 3. Appointment Scheduling Insights
-Retrieves upcoming appointments along with patient details to support resource planning.
+Extracts upcoming appointments with patient details to assist in planning and resource allocation.
 
 ---
 
 ### 4. Billing Status Analysis
-Uses conditional logic to categorise payments as *Paid* or *Unpaid*, supporting financial tracking.
+Uses conditional logic to classify bills as *Paid* or *Unpaid*, enabling financial tracking.
 
 ---
 
 ### 5. Revenue Analysis by Service
-Calculates total revenue and number of transactions per service, helping identify high-performing services.
+Calculates total revenue generated by each service and identifies high-performing services.
 
 ---
 
 ### 6. Patient Engagement Analysis
-Measures the number of visits per patient to understand utilisation patterns and potential over/under usage.
+Measures the number of visits per patient to understand utilisation patterns and engagement levels.
 
 ---
 
-##  Key Insights (Example)
+## 📈 Insights
 
-- Some services generate higher revenue despite lower appointment volume  
-- Missed and cancelled appointments directly impact clinic efficiency  
-- Patient engagement varies significantly across the dataset  
-- Billing data can highlight potential cash flow issues  
-
----
-
-##  Business Value
-
-This database structure enables:
-- Efficient patient and appointment management  
-- Better financial tracking and revenue analysis  
-- Improved resource planning for healthcare professionals  
-- Data-driven decision-making in clinic operations  
+- Certain services generate higher revenue despite lower usage frequency  
+- Missed and cancelled appointments highlight potential inefficiencies in scheduling  
+- Patient engagement varies significantly, indicating differences in healthcare needs  
+- Billing data reveals potential delays in payment collection  
 
 ---
 
-##  Limitations
-- The dataset is simulated and does not represent real patient data  
-- Does not include advanced features such as:
-  - Real-time updates  
-  - Multi-branch clinic support  
-  - Integration with external healthcare systems  
+## 💼 Business Value
+
+This database system provides significant value by enabling:
+
+- Efficient management of patient and appointment records  
+- Improved financial tracking and revenue analysis  
+- Better allocation of healthcare resources  
+- Enhanced visibility into clinic performance  
+- Data-driven decision-making for operational improvements  
 
 ---
 
-##  Future Improvements
-- Add stored procedures and triggers  
-- Integrate reporting dashboards (Tableau / Power BI)  
-- Extend schema for multi-location clinics  
-- Include time-series analysis for appointment trends  
+## ⚠️ Limitations
+
+- The dataset is synthetic and does not represent real patient data  
+- The system does not include real-time updates or automation  
+- Limited scalability for multi-branch clinic environments  
+- No integration with external healthcare or billing systems  
 
 ---
 
-##  Conclusion
-This project demonstrates how SQL and relational database design can be applied to solve real-world healthcare data challenges.  
+## 🚀 Future Work
 
-It highlights the importance of structured data in improving operational workflows, financial tracking, and overall decision-making within a clinic environment.
+- Implement stored procedures and triggers for automation  
+- Integrate dashboards using Tableau or Power BI  
+- Extend schema to support multiple clinic locations  
+- Add time-series analysis for appointment trends  
+- Introduce user roles and access control  
+
+---
+
+## ▶️ How to Run
+
+1. Open MySQL Workbench (or any SQL environment)  
+2. Create a new SQL query tab  
+3. Open the file: `sql/clinic_database.sql`  
+4. Execute the full script  
+5. Run the example queries at the end of the script  
+
+---
+
+## 🧪 Data Design
+
+The dataset used in this project is synthetically generated to simulate realistic healthcare scenarios.
+
+Key considerations:
+- Non-repetitive and structured data  
+- Consistent relationships across all tables  
+- Balanced distribution of appointment statuses  
+- Realistic variation in patient demographics and service usage  
+
+---
+
+## Author
+  
