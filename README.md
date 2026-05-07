@@ -109,17 +109,11 @@ The database is structured around six core entities:
 ## 📁 Repository Structure
 
 sql-clinic-database/
-
 │── sql/
-
 │ └── clinic_database.sql
-
 │── er-diagram/
-
 │ └── er_diagram.png
-
 │── README.md
-
 │── LICENSE
 
 
