@@ -215,3 +215,6 @@ Key considerations:
 
 ## Author
   
+**Gaurav Parashar**  
+MSc Business Analytics  
+Robert Gordon University
