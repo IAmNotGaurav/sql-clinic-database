@@ -34,7 +34,7 @@ The key objectives of this project are:
 
 - To design a robust relational database schema for healthcare operations  
 - To establish clear relationships between entities using primary and foreign keys  
-- To populate the database with realistic and non-repetitive sample data (100+ patients)  
+- To populate the database with realistic sample data (100+ patients)  
 - To simulate real-world appointment scenarios (completed, booked, cancelled, no-show)  
 - To develop SQL queries that extract meaningful business insights  
 - To demonstrate how structured data supports operational and analytical decision-making  
