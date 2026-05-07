@@ -1,6 +1,6 @@
-# 🏥 Clinic Database System (SQL Project)
+#  Clinic Database System (SQL Project)
 
-## 📌 Project Overview
+##  Project Overview
 This project involves the design and implementation of a relational database system for a healthcare clinic using SQL.
 
 The system is built to simulate real-world clinic operations, enabling structured management of:
@@ -14,7 +14,7 @@ The aim is to demonstrate how a well-designed database can support both **operat
 
 ---
 
-## 🎯 Problem Statement
+##  Problem Statement
 Healthcare clinics often deal with fragmented data across multiple systems, making it difficult to:
 - Track patient interactions efficiently  
 - Monitor appointment activity  
@@ -25,7 +25,7 @@ This project addresses these challenges by designing a **centralised relational 
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 - Design a structured relational database schema  
 - Define clear relationships between entities  
 - Populate the database with realistic, high-quality sample data (100+ patients)  
@@ -34,7 +34,7 @@ This project addresses these challenges by designing a **centralised relational 
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 - **Database:** MySQL  
 - **Language:** SQL  
 - **Concepts Applied:**
@@ -47,9 +47,9 @@ This project addresses these challenges by designing a **centralised relational 
 
 ---
 
-## 🧩 Database Design
+##  Database Design
 
-### 📊 Entities
+###  Entities
 
 The database consists of six core entities:
 
@@ -73,7 +73,7 @@ The database consists of six core entities:
 
 ---
 
-### 🔗 Relationships
+###  Relationships
 
 - **Appointments → Patients, Professionals, Services**  
   One-to-many relationships where each appointment is linked to one entity, but each entity can have multiple appointments.
@@ -88,7 +88,7 @@ The database consists of six core entities:
 
 ---
 
-## 📂 Data Overview
+##  Data Overview
 - 100+ patients with realistic demographic data  
 - Multiple healthcare services with varied pricing and duration  
 - Appointment records covering:
@@ -101,7 +101,7 @@ The dataset is designed to reflect **real-world variability**, avoiding repetiti
 
 ---
 
-## 📊 Key Analytical Queries
+##  Key Analytical Queries
 
 ### 1. Patient Demographics Analysis
 Identifies patients within specific age and gender groups, useful for targeted healthcare services (e.g., screenings).
@@ -133,7 +133,7 @@ Measures the number of visits per patient to understand utilisation patterns and
 
 ---
 
-## 💡 Key Insights (Example)
+##  Key Insights (Example)
 
 - Some services generate higher revenue despite lower appointment volume  
 - Missed and cancelled appointments directly impact clinic efficiency  
@@ -142,7 +142,7 @@ Measures the number of visits per patient to understand utilisation patterns and
 
 ---
 
-## 📈 Business Value
+##  Business Value
 
 This database structure enables:
 - Efficient patient and appointment management  
@@ -152,7 +152,7 @@ This database structure enables:
 
 ---
 
-## ⚠️ Limitations
+##  Limitations
 - The dataset is simulated and does not represent real patient data  
 - Does not include advanced features such as:
   - Real-time updates  
@@ -161,7 +161,7 @@ This database structure enables:
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 - Add stored procedures and triggers  
 - Integrate reporting dashboards (Tableau / Power BI)  
 - Extend schema for multi-location clinics  
@@ -169,7 +169,7 @@ This database structure enables:
 
 ---
 
-## 📌 Conclusion
+##  Conclusion
 This project demonstrates how SQL and relational database design can be applied to solve real-world healthcare data challenges.  
 
 It highlights the importance of structured data in improving operational workflows, financial tracking, and overall decision-making within a clinic environment.
