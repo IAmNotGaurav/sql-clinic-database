@@ -109,17 +109,23 @@ The database is structured around six core entities:
 ## 📁 Repository Structure
 
 sql-clinic-database/
+
 │── sql/
+
 │ └── clinic_database.sql
+
 │── er-diagram/
+
 │ └── er_diagram.png
+
 │── README.md
+
 │── LICENSE
 
 
 ---
 
-## 📊 Key Queries
+## Key Queries
 
 ### 1. Patient Demographics Analysis
 Retrieves patients based on age range and gender to support targeted healthcare services.
@@ -151,7 +157,7 @@ Measures the number of visits per patient to understand utilisation patterns and
 
 ---
 
-## 📈 Insights
+## Insights
 
 - Certain services generate higher revenue despite lower usage frequency  
 - Missed and cancelled appointments highlight potential inefficiencies in scheduling  
@@ -160,7 +166,7 @@ Measures the number of visits per patient to understand utilisation patterns and
 
 ---
 
-## 💼 Business Value
+## Business Value
 
 This database system provides significant value by enabling:
 
@@ -172,7 +178,7 @@ This database system provides significant value by enabling:
 
 ---
 
-## ⚠️ Limitations
+## Limitations
 
 - The dataset is synthetic and does not represent real patient data  
 - The system does not include real-time updates or automation  
@@ -181,7 +187,7 @@ This database system provides significant value by enabling:
 
 ---
 
-## 🚀 Future Work
+## Future Work
 
 - Implement stored procedures and triggers for automation  
 - Integrate dashboards using Tableau or Power BI  
@@ -191,7 +197,7 @@ This database system provides significant value by enabling:
 
 ---
 
-## ▶️ How to Run
+## How to Run
 
 1. Open MySQL Workbench (or any SQL environment)  
 2. Create a new SQL query tab  
@@ -201,7 +207,7 @@ This database system provides significant value by enabling:
 
 ---
 
-## 🧪 Data Design
+## Data Design
 
 The dataset used in this project is synthetically generated to simulate realistic healthcare scenarios.
 
